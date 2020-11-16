@@ -215,13 +215,13 @@ int main (int argc, char *argv[])
   if (tracing == true)
     {
       AsciiTraceHelper ascii;
-      wifiPhy.EnableAsciiAll (ascii.CreateFileStream ("mesh3x3OSLR.tr"));
-      wifiPhy.EnablePcap ("mesh3x3OSLR", devices);
+      wifiPhy.EnableAsciiAll (ascii.CreateFileStream ("OLSR.tr"));
+      wifiPhy.EnablePcap ("OLSR", devices);
       // Trace routing tables
-      Ptr<OutputStreamWrapper> routingStream = Create<OutputStreamWrapper> ("mesh3x3OSLR.routes", std::ios::out);
+      Ptr<OutputStreamWrapper> routingStream = Create<OutputStreamWrapper> ("OLSR.routes", std::ios::out);
       olsr.PrintRoutingTableAllEvery (Seconds (2), routingStream);
-      Ptr<OutputStreamWrapper> neighborStream = Create<OutputStreamWrapper> ("mesh3x3OSLR.neighbors", std::ios::out);
-      olsr.PrintNeighborCacheAllEvery (Seconds (2), neighborStream);
+      //Ptr<OutputStreamWrapper> neighborStream = Create<OutputStreamWrapper> ("OSLR.neighbors", std::ios::out);
+      //olsr.PrintNeighborCacheAllEvery (Seconds (2), neighborStream);
 
       // To do-- enable an IP-level trace that shows forwarding events only
     }

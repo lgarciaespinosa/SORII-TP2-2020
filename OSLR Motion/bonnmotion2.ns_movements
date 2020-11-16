@@ -1,3 +1,3 @@
-$node_(4) set X_ 100.0
-$node_(4) set Y_ 100.0
-$ns_ at 5.0 "$node_(4) setdest 400.0 350.0 50.0"
+$node_(4) set X_ 75.0
+$node_(4) set Y_ 75.0
+$ns_ at 10.0 "$node_(4) setdest 225 150 30.0"
